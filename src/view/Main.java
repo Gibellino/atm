@@ -73,10 +73,9 @@ public class Main {
 						+ "\n Numero: ");
 				nif = read.nextInt();
 				
-				System.out.println("NIf ==" + nif + "\n CB Size = " + cb.size() + "\n");
-				
 				for(int i=0; i< cb.size(); i++){
-					if(nif == cb.get(i).getNumero()){
+					System.out.println("NUmero: " + cb.get(i).getNumero() + "\n");
+					if(cb.get(i).getNumero() == nif){
 						nif = i;
 						break;
 					}
@@ -85,10 +84,7 @@ public class Main {
 					}
 				}
 				
-				System.out.println("NIf ==" + nif + "\n CB Size = " + cb.size() + "\n");
-				
 			}while(nif > cb.size());
-			
 			
 			System.out.println("\nBem-Vindo, " + cb.get(nif).getP().getNome() + "!");
 			
