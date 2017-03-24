@@ -74,13 +74,17 @@ public class Main {
 				nif = read.nextInt();
 				
 				for(int i=0; i< cb.size(); i++){
-					System.out.println("NUmero: " + cb.get(i).getNumero() + "\n");
 					if(cb.get(i).getNumero() == nif){
 						nif = i;
 						break;
 					}
 					else{
-						nif = cb.size()+1;
+						if(i == (cb.size()-1) ){
+							nif = cb.size()+1;
+						}
+						else{
+							continue;
+						}
 					}
 				}
 				
